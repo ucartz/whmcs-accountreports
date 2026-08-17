@@ -1,0 +1,20 @@
+{
+    "name": "ucartz/whmcs-accountreports",
+    "description": "WHMCS Account Reports addon module",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/ucartz/whmcs-accountreports",
+    "authors": [
+        {
+            "name": "Ucartz Online Pvt Ltd",
+            "homepage": "https://www.ucartz.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "dompdf/dompdf": "^3.1"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

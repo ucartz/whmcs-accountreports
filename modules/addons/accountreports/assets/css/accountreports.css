@@ -1,0 +1,99 @@
+/* Account Reports - minimal, theme-agnostic styling.
+   Relies on the active theme's own classes (btn, form-control, pagination,
+   label, alert, table) for individual control appearance, so it doesn't
+   fight a theme's design system -- but the FILTER LAYOUT below is our own
+   flexbox, not Bootstrap's .row/.col-sm-*. Different client area themes
+   (and different Bootstrap versions/namespacing within them) can't be
+   relied on to implement that grid the same way, and this module has to
+   render correctly inside whichever theme is active, not just Lagom. */
+
+.accountreports-page {
+    max-width: 100%;
+}
+
+.accountreports-filters {
+    margin-bottom: 20px;
+}
+
+.accountreports-page .ar-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.accountreports-page .ar-filter-field {
+    flex: 1 1 200px;
+    min-width: 160px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.accountreports-page .ar-filter-field label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.accountreports-page .ar-filter-field .form-control {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.accountreports-page .ar-filter-actions {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.accountreports-page .ar-filter-actions-spacer {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .accountreports-page .ar-filter-field {
+        flex-basis: 100%;
+    }
+}
+
+.accountreports-page .accountreports-export {
+    margin-bottom: 20px;
+}
+
+.accountreports-page .ar-export-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.accountreports-page .accountreports-table td,
+.accountreports-page .accountreports-table th {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.accountreports-page .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.accountreports-page .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.accountreports-disabled {
+    max-width: 640px;
+}
+
+/* --- Admin ("Manage Customers") panel --- */
+
+.accountreports-admin .ar-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
